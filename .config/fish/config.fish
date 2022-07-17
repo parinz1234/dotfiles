@@ -11,9 +11,19 @@ switch (uname)
     source (dirname (status --current-filename))/config-wls2-linux.fish
 end
 
+
 # set default node version
 set --universal nvm_default_version v16.16.0
 
+# NVM
+function __check_rvm --on-variable PWD --description 'Do nvm stuff'
+  status --is-command-substitution; and return
+
+  if test -f .nvmrc; and test -r .nvmrc;
+    nvm use
+  else
+  end
+end
 
 # my alias
 alias vim="nvim"
