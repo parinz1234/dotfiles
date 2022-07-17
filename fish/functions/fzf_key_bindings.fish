@@ -1,1 +1,0 @@
-/Users/parinya.ons/.fzf/shell/key-bindings.fish
