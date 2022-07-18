@@ -3,6 +3,10 @@ call plug#begin("~/.vim/plugged")
   Plug 'dracula/vim'
 
   if has("nvim")
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-rhubarb'
+    Plug 'cohama/lexima.vim'
+    Plug 'neovim/nvim-lspconfig'
     Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'nvim-lualine/lualine.nvim'
     " If you want to have icons in your statusline choose one of these
