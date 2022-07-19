@@ -20,5 +20,5 @@
 
 - language server
   - typescript language server
-	- Intelephense (PHP)
-	- diagnostic language server
+  - Intelephense (PHP)
+  - diagnostic language server
