@@ -83,6 +83,12 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.intelephense.setup {
+  on_attach = on_attach,
+  filetypes = { "php" },
+  capabilities = capabilities
+}
+
 nvim_lsp.diagnosticls.setup {
   on_attach = on_attach,
   filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'pandoc' },
