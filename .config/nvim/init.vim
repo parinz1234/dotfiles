@@ -38,5 +38,32 @@ syntax enable
 colorscheme dracula
 
 " Options
+set nocompatible
 set number " Show the line numbers
 set title " Show file title
+set encoding=utf-8
+set title
+set autoindent
+" set background=dark
+set nobackup
+set hlsearch
+set showcmd
+set cmdheight=1
+set laststatus=2
+set scrolloff=10
+
+" Be smart when using tabs ;)
+set smarttab
+" indents
+filetype plugin indent on
+set shiftwidth=2
+set tabstop=2
+set ai "Auto indent
+set si "Smart indent
+set nowrap "No Wrap lines
+set backspace=start,eol,indent
+
+" Fish
+au BufNewFile,BufRead *.fish set filetype=fish
+
+
