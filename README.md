@@ -17,3 +17,8 @@
   - nvim-treesitter/nvim-treesitter
   - nvim-lua/plenary.nvim
   - nvim-telescope/telescope.nvim
+
+- language server
+  - typescript language server
+	- Intelephense (PHP)
+	- diagnostic language server
