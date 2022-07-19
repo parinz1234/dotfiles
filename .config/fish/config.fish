@@ -4,6 +4,11 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+if type -q exa
+  alias ll "exa -l -g --icons"
+  alias lla "ll -a"
+end
+
 switch (uname)
 #  case Darwin
 #    source (dirname (status --current-filename))/config-osx.fish
