@@ -56,6 +56,7 @@ set scrolloff=10
 set smarttab
 " indents
 filetype plugin indent on
+set expandtab
 set shiftwidth=2
 set tabstop=2
 set ai "Auto indent
@@ -63,7 +64,24 @@ set si "Smart indent
 set nowrap "No Wrap lines
 set backspace=start,eol,indent
 
+" TypeScript with React
+au BufNewFile,BufRead *.tsx			setf typescriptreact
+
 " Fish
 au BufNewFile,BufRead *.fish set filetype=fish
+
+" Typescript or Qt translation file (which is XML)
+au BufNewFile,BufReadPost *.ts
+	\ if getline(1) =~ '<?xml' |
+	\   setf xml |
+	\ else |
+	\   setf typescript |
+	\ endif
+
+" JavaScript, ECMAScript, ES module script, CommonJS script
+au BufNewFile,BufRead *.js,*.javascript,*.es,*.mjs,*.cjs   setf JavaScript
+
+" JavaScript with React
+au BufNewFile,BufRead *.jsx			setf javascriptreact
 
 
