@@ -79,7 +79,7 @@ nvim_lsp.flow.setup {
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  filetypes = { "typescript", "typescriptreact" },
   capabilities = capabilities
 }
 
@@ -131,7 +131,7 @@ nvim_lsp.diagnosticls.setup {
       prettier = {
         command = 'prettier_d_slim',
         rootPatterns = { '.git' },
-        -- requiredFiles: { 'prettier.config.js' },
+        requiredFiles = { '.prettierrc' },
         args = { '--stdin', '--stdin-filepath', '%filename' }
       }
     },
