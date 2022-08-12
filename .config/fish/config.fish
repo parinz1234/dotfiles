@@ -1,9 +1,5 @@
 set fish_greeting ""
 
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
-
 if type -q exa
   alias ll "exa -l -g --icons"
   alias lla "ll -a"
@@ -31,5 +27,22 @@ function __check_rvm --on-variable PWD --description 'Do nvm stuff'
 end
 
 # my alias
-alias vim="nvim"
-alias vi="nvim"
+# alias vim="nvim"
+# alias vi="nvim"
+
+# golang
+# export GOROOT=~/sdk/go
+set -x GOROOT ~/sdk/go
+
+# symbolic link example
+# ln -s ~/Desktop/Config/golang/1.19/go ~/sdk/go
+
+# export GOPATH=~/go
+set -x GOPATH ~/go
+
+# export GOBIN=$GOPATH/bin
+set -x GOBIN $GOPATH/bin
+
+# export PATH=$PATH:$GOROOT/bin:$GOBIN
+fish_add_path $GOROOT/bin
+fish_add_path $GOBIN
