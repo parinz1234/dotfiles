@@ -52,3 +52,8 @@ if type -q pyenv
   set -Ux fish_user_paths $PYENV_ROOT/bin $fish_user_paths
   status --is-interactive; and pyenv init --path | source
 end
+
+
+if type -q python3
+  set -Ux fish_user_paths (python3 -m site --user-base)/bin $fish_user_paths
+end
