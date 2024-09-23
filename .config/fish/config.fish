@@ -14,7 +14,7 @@ end
 
 
 # set default node version
-set --universal nvm_default_version v16.16.0
+set --universal nvm_default_version v18.15.0
 
 # NVM
 function __check_rvm --on-variable PWD --description 'Do nvm stuff'
@@ -46,3 +46,9 @@ set -x GOBIN $GOPATH/bin
 # export PATH=$PATH:$GOROOT/bin:$GOBIN
 fish_add_path $GOROOT/bin
 fish_add_path $GOBIN
+
+if type -q pyenv
+  set -Ux PYENV_ROOT $HOME/.pyenv
+  set -Ux fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+  status --is-interactive; and pyenv init --path | source
+end
